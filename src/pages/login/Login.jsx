@@ -1,6 +1,8 @@
+import "./login.scss";
+
 export default function Login (){
     return (
-        <div>
+        <div className="login">
             LOGIN
         </div>
     )

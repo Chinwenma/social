@@ -1,6 +1,7 @@
+import "./profile.scss";
 export default function Profile (){
     return (
-        <div>
+        <div className="profile">
             PROFILE
         </div>
     )
