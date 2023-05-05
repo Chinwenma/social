@@ -5,15 +5,16 @@ import Profile from "./pages/profile/Profile";
 
 
 import {
-  createBrowserRouter, Outlet, RouterProvider,
+  createBrowserRouter,useNavigate, Outlet, RouterProvider,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/Rightbar";
 
 function App() {
+  const currentUser = false;
 
-  const Layout = ()=>{
+  const Layout = () => {
     return (
       <div>
         <Navbar />
@@ -24,8 +25,16 @@ function App() {
         </div>
       </div>
 
-    )
-  }
+    );
+  };
+  const  protectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return
+      <useNavigate to="/login" />;
+
+    }
+    return children;
+  };
 
 
 
@@ -34,7 +43,11 @@ function App() {
 
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <protectedRoute>
+          <Layout />
+        </protectedRoute>
+      ),
       children: [
         {
           path: "/",
