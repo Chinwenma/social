@@ -1,5 +1,9 @@
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import Home from "./pages/home/Home";
+import Profile from "./pages/profile/Profile";
+
+
 import {
   createBrowserRouter, Outlet, RouterProvider,
 } from "react-router-dom";
@@ -8,8 +12,8 @@ import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/Rightbar";
 
 function App() {
-  
-  const layout = () => {
+
+  const Layout = ()=>{
     return (
       <div>
         <Navbar />
@@ -26,6 +30,22 @@ function App() {
 
 
   const router = createBrowserRouter([
+
+
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/profile/:id",
+          element: <Profile />,
+        }
+      ]
+    },
     {
       path: "/login",
       element: <Login />,
