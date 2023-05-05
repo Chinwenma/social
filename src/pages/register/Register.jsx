@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./register.scss";
 export default function Regsiter(){
     return (
@@ -7,7 +8,9 @@ export default function Regsiter(){
                     <h1>Matrix Social</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ipsam fugit consectetur </p>
                     <span>Have an account already?</span>
+                    <Link to="/login">
                     <button>Login</button>
+                    </Link>  
                 </div>
                 <div className="right">
                     <h1>Register</h1>
