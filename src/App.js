@@ -3,16 +3,22 @@ import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 
-
 import {
-  createBrowserRouter,useNavigate, Outlet, RouterProvider,
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Outlet,
+  Navigate,
 } from "react-router-dom";
+// import {
+//   createBrowserRouter,Navigate, Outlet, RouterProvider,
+// } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/Rightbar";
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
 
   const Layout = () => {
     return (
@@ -27,10 +33,9 @@ function App() {
 
     );
   };
-  const  protectedRoute = ({ children }) => {
+  const  ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return
-      <useNavigate to="/login" />;
+      return<Navigate to="/login" />;
 
     }
     return children;
@@ -44,9 +49,9 @@ function App() {
     {
       path: "/",
       element: (
-        <protectedRoute>
+        <ProtectedRoute>
           <Layout />
-        </protectedRoute>
+        </ProtectedRoute>
       ),
       children: [
         {
