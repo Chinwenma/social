@@ -12,14 +12,23 @@
         padding: 20px;
 
         .item {
+            box-shadow: 0px 0px 3.61212px 1.80606px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+padding: 20px;
+
+
             span {
                 color: rgb(68, 73, 77);
+              
             }
 
             .user {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin: 20px 0;
+              
+
 
                 .userInfo {
                     display: flex;
@@ -30,15 +39,36 @@
                         height: 40px;
                         width: 40px;
                         border-radius: 50%;
+                        object-fit: cover;
+                        
                     }
 
-                    span {}
+                    span {
+                        font-weight: 500;
+                        color: black;
+
+                    }
                 }
 
                 .buttons {
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    button{
+                        border-radius: 5px;
+                        border: none;
+                        padding: 5px;
+
+                        color: white;
+                        cursor: pointer;
+                        &:first-child {
+                            background-color:rgb(57, 95, 128);
+                        }
+                        &:last-child{
+                            background-color: red;
+                        }
+                    }
+                    
 
                 }
             }
