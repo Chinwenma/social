@@ -20,7 +20,7 @@ export default function Navbar() {
                 <GridViewOutlinedIcon />
                 <div className='search'>
                     <SearchOutlinedIcon />
-                    <input placeholder='Search...' />
+                    <input placeholder='Search...'  style={{background:"transparent"}}/>
                 </div>
             </div>
             <div className='right'>

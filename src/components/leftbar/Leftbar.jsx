@@ -18,7 +18,7 @@ export default function Leftbar() {
             <div className='container'>
                 <div className='menu'>
                     <div className='user'>
-                        {/* <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='user' /> */}
+                        <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='user' />
                         <span>Ruhama May</span>
                     </div>
                     <div className='item'>

@@ -26,16 +26,18 @@ function App() {
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
-          <Outlet />
+          <div style={{ flex:"6" }}>
+            <Outlet />
+          </div>
           <Rightbar />
         </div>
       </div>
 
     );
   };
-  const  ProtectedRoute = ({ children }) => {
+  const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return<Navigate to="/login" />;
+      return <Navigate to="/login" />;
 
     }
     return children;
