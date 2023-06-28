@@ -4,6 +4,7 @@
     top: 70px;
     height: calc(100vh - 70px);
     overflow: scroll;
+
     &::-webkit-scrollbar {
         display: none;
     }
@@ -14,12 +15,13 @@
         .item {
             box-shadow: 0px 0px 3.61212px 1.80606px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
-padding: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
 
 
             span {
                 color: rgb(68, 73, 77);
-              
+
             }
 
             .user {
@@ -27,20 +29,35 @@ padding: 20px;
                 align-items: center;
                 justify-content: space-between;
                 margin: 20px 0;
-              
+
 
 
                 .userInfo {
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    position: relative;
 
                     img {
                         height: 40px;
                         width: 40px;
                         border-radius: 50%;
                         object-fit: cover;
-                        
+
+                    }
+
+                    .online {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                           position: absolute;
+                        top: 0;
+                        left: 30px
+                    }
+
+                    p {
+                        color: gray;
                     }
 
                     span {
@@ -54,21 +71,24 @@ padding: 20px;
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    button{
+
+                    button {
                         border-radius: 5px;
                         border: none;
                         padding: 5px;
 
                         color: white;
                         cursor: pointer;
+
                         &:first-child {
-                            background-color:rgb(57, 95, 128);
+                            background-color: rgb(57, 95, 128);
                         }
-                        &:last-child{
+
+                        &:last-child {
                             background-color: red;
                         }
                     }
-                    
+
 
                 }
             }
