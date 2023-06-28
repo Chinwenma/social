@@ -10,13 +10,17 @@ import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate, } from "re
 import Navbar from "./components/navbar/Navbar";
 import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/Rightbar";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
   const currentUser = true;
+  const  {darkMode} =useContext(DarkModeContext)
+  
 
   const Layout = () => {
     return (
-      <div className="theme-dark">
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />

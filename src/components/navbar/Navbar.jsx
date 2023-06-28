@@ -9,6 +9,8 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
 import { Link } from 'react-router-dom';
 export default function Navbar() {
+    const  {darkMode} =useContext(DarkModeContext)
+
     return (
         <div className="navbar">
             <div className='left'>
