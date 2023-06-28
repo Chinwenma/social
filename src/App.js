@@ -2,14 +2,8 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Outlet,
-  Navigate,
-} from "react-router-dom";
+import "./style.scss"
+import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate, } from "react-router-dom";
 // import {
 //   createBrowserRouter,Navigate, Outlet, RouterProvider,
 // } from "react-router-dom";
@@ -22,7 +16,7 @@ function App() {
 
   const Layout = () => {
     return (
-      <div>
+      <div className="theme-dark">
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
