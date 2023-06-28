@@ -1,4 +1,6 @@
 import './navbar.scss';
+import { useContext } from "react";
+import { DarkModeContext } from '../../context/darkModeContext';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
@@ -8,8 +10,11 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
 import { Link } from 'react-router-dom';
+
+
 export default function Navbar() {
-    const  {darkMode} =useContext(DarkModeContext)
+
+    const { toggle, darkMode } = useContext(DarkModeContext)
 
     return (
         <div className="navbar">
@@ -18,11 +23,15 @@ export default function Navbar() {
                     <span> Socio_Matrix</span>
                 </Link>
                 <HomeOutlinedIcon />
-                <DarkModeOutlinedIcon />
+                {darkMode ? (
+                    <WbSunnyOutlinedIcon onClick={toggle} />
+                ) : (
+                    <DarkModeOutlinedIcon onClick={toggle} />
+                )}
                 <GridViewOutlinedIcon />
                 <div className='search'>
                     <SearchOutlinedIcon />
-                    <input placeholder='Search...'  style={{background:"transparent"}}/>
+                    <input placeholder='Search...' style={{ background: "transparent" }} />
                 </div>
             </div>
             <div className='right'>
@@ -30,7 +39,7 @@ export default function Navbar() {
                 <EmailOutlinedIcon />
                 <NotificationsOutlinedIcon />
                 <div className='user'>
-                    <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='user'/>
+                    <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='user' />
                     <span>Ruhama May</span>
                 </div>
             </div>
