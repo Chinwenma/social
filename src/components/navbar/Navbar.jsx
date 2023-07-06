@@ -22,22 +22,22 @@ export default function Navbar() {
                 <Link to="/" style={{ textDecoration: "none" }}>
                     <span> Socio_Matrix</span>
                 </Link>
-                <HomeOutlinedIcon />
+                <HomeOutlinedIcon className='icon' />
                 {darkMode ? (
-                    <WbSunnyOutlinedIcon onClick={toggle} />
+                    <WbSunnyOutlinedIcon onClick={toggle}  className='icon'/>
                 ) : (
-                    <DarkModeOutlinedIcon onClick={toggle} />
+                    <DarkModeOutlinedIcon onClick={toggle} className='icon'/>
                 )}
-                <GridViewOutlinedIcon />
+                <GridViewOutlinedIcon className='icon' />
                 <div className='search'>
-                    <SearchOutlinedIcon />
+                    <SearchOutlinedIcon className='icon' />
                     <input placeholder='Search...' style={{ background: "transparent" }} />
                 </div>
             </div>
             <div className='right'>
-                <PersonOutlinedIcon />
-                <EmailOutlinedIcon />
-                <NotificationsOutlinedIcon />
+                <PersonOutlinedIcon className='icon' />
+                <EmailOutlinedIcon className='icon' />
+                <NotificationsOutlinedIcon className='icon'/>
                 <div className='user'>
                     <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt='user' />
                     <span>Ruhama May</span>
