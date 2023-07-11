@@ -1,4 +1,4 @@
-import "./post.scss";
+import "./posts.scss";
 
 const Posts = () => {
 
@@ -7,7 +7,7 @@ const Posts = () => {
   const posts = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Ruhama May",
       userId: 1,
       profilePic:
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
