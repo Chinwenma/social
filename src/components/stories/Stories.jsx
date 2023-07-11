@@ -33,13 +33,13 @@ const stories = [
 
   return (
     <div className='stories'>
-        <div className="story">
+        <div className="story" >
             <img src={currentUser.profilePicture} alt="img"/>
             <span>{currentUser.name}</span>
             <button>+</button>
         </div>
      {stories.map(story => (
-        <div className="story">
+        <div className="story" key={story.id}>
             <img src={story.img} alt="img"/>
             <span>{story.name}</span>
         </div>
