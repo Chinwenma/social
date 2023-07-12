@@ -1,13 +1,12 @@
+import Post from "../post/Post";
 import "./posts.scss";
 
 const Posts = () => {
-
-
-  //temporary
+  //TEMPORARY
   const posts = [
     {
       id: 1,
-      name: "Ruhama May",
+      name: "John Doe",
       userId: 1,
       profilePic:
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -24,19 +23,11 @@ const Posts = () => {
     },
   ];
 
+  return <div className="posts">
+    {posts.map(post=>(
+      <Post post={post} key={post.id}/>
+    ))}
+  </div>;
+};
 
-
-
-
-
-  return (
-    <div className='posts'>
-      {posts.map((post) =>(
-     <Posts post ={post} key = {post.id} /> 
-      ))}
-     
-    </div>
-  )
-}
-
-export default Posts
+export default Posts;
